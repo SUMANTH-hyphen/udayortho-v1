@@ -4,7 +4,7 @@ import { useId } from "react";
 export function FeaturesSectionDemo1() {
     return (
         <div className="">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
                 {grid.map((feature) => (
                     <div
                         key={feature.title}
