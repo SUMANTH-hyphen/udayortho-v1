@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { OverlapCards } from "./overlap-cards";
+import Image from "next/image";
 
 
 export default function HeroSectionOne() {
@@ -19,7 +20,7 @@ export default function HeroSectionOne() {
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
       </div>
       <div>
-        <img
+        <Image
           height={500}
           width={500}
           src="uday-doodle.png"
@@ -146,7 +147,7 @@ const Navbar = () => {
       <div className="flex items-center gap-2">
 
         {/* <div className="size-7 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" /> */}
-        {/* <img
+        {/* <Image
           height={500}
           width={500}
           src="uday-doodle.png"

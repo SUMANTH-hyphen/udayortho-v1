@@ -1,4 +1,4 @@
-import React, { ReactNode, forwardRef, ForwardedRef, HTMLAttributes } from 'react';
+import React, { ReactNode, forwardRef, HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils'; // Assuming cn is imported correctly from your utility library
 
 interface TextWrapperProps extends HTMLAttributes<HTMLDivElement> {

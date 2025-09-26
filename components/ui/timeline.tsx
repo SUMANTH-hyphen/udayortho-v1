@@ -42,7 +42,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           The Journey So Far
         </h2>
         <p className=" text-md max-w-8xl lg:text-2xl text-slate-700 dark:text-slate-300 ">
-          From classrooms to clinics, here’s a glimpse of my path in dentistry and orthodontics.
+          From classrooms to clinics, here&apos;s a glimpse of my path in dentistry and orthodontics.
         </p>
       </div>
 

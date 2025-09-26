@@ -361,7 +361,7 @@ export default function Home() {
 
         <MaxWidthWrapper className="flex flex-col items-center w-full gap-10 my-20 md:gap-16 md:my-32 ">
           <HeadingTextWrapper className="text-2xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700 dark:text-slate-300 text-center" >
-            "Presentations"
+            Presentations
           </HeadingTextWrapper>
           <div className="relative w-full max-w-full overflow-visible">
             {/* Optional: fade effect overlays */}
