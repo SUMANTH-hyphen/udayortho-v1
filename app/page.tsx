@@ -192,18 +192,13 @@ const experience = [
 
 const patents = [
   {
-    title: "Orthodontic Accessory Bracket",
-    description: "Indian Design Patent pending · August 2025",
-    link: "",
-  },
-  {
     title: "Self-Ligating Orthodontic Accessory Eyelet Bracket",
     description: "Indian Utility and Design Patent pending · August 2025",
     link: "",
   },
   {
-    title: "Orthodontic Archwire Bending Device",
-    description: "Indian Utility and Design Patent pending · August 2025",
+    title: "Orthodontic Accessory Bracket",
+    description: "Indian Design Patent pending · August 2025",
     link: "",
   },
   {
@@ -212,13 +207,33 @@ const patents = [
     link: "",
   },
   {
+    title: "Orthodontic Archwire Bending Device",
+    description: "Indian Utility and Design Patent pending · August 2025",
+    link: "",
+  },
+  {
     title: "Orthodontic Retraction Loop",
     description: "Indian Design Patent pending · July 2025",
     link: "",
   },
   {
+    title: "Orthodontic Archwire Distal Bending Device",
+    description: "Indian Design Patent · August 2025",
+    link: "",
+  },
+  {
     title: "Inverted Orthodontic Retraction Loops with Occlusal Application",
     description: "UK Design Patent Granted · June 2025",
+    link: "",
+  },
+  {
+    title: "Hygienic Orthodontic Bracket",
+    description: "Indian Design Patent · September 2025",
+    link: "",
+  },
+  {
+    title: "Orthodontic Auxiliary Bracket",
+    description: "Indian Design Patent · September 2025",
     link: "",
   },
 ];
@@ -299,6 +314,12 @@ export default function Home() {
       <main className="">
         <HeroSectionOne />
 
+        <ScreenWrapper className="max-w-7xl mx-auto mt-20 px-4 md:px-8 flex flex-col items-center justify-center">
+          <HeadingTextWrapper className=" md:mb-5 text-2xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700 dark:text-slate-300 text-center">
+            Innovations shaping the future of orthodontics
+          </HeadingTextWrapper>
+          <HoverEffect items={patents} />
+        </ScreenWrapper>
 
         <ScreenWrapper className="relative w-full overflow-clip">
           <Timeline data={experience} />
@@ -342,15 +363,6 @@ export default function Home() {
           </div>
           <CanvasRevealEffectDemo />
         </MaxWidthWrapper>
-
-
-        <ScreenWrapper className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center justify-center">
-          <HeadingTextWrapper className=" md:mb-5 text-2xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700 dark:text-slate-300 text-center">
-            Innovations shaping the future of orthodontics
-          </HeadingTextWrapper>
-          <HoverEffect items={patents} />
-        </ScreenWrapper>
-
 
         <MaxWidthWrapper className="flex flex-col items-center w-full gap-10 my-20 md:gap-16 md:my-32 ">
           <HeadingTextWrapper className="text-2xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700 dark:text-slate-300 text-center" >

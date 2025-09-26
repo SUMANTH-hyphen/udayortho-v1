@@ -36,6 +36,14 @@ export function CanvasRevealEffectDemo() {
             colors={[[125, 211, 252]]}
           />
         </Card>
+
+        <Card title="A Novel Appointment Protocol to Accelerate Orthodontic Treatment. This publication presents an scheduling approach aimed at improving orthodontic efficiency while ensuring patient comfort." icon={<CardIcon3 />}>
+          <CanvasRevealEffect
+            animationSpeed={4}
+            containerClassName="bg-rose-500"
+            colors={[[125, 211, 252]]}
+          />
+        </Card>
       </div>
     </>
   );
@@ -98,6 +106,13 @@ const CardIcon2 = () => {
   return (
     <div>
         <p>Interproximal Reduction Facilitating Orthodontic Teeth Extraction</p>
+    </div>
+  );
+};
+const CardIcon3 = () => {
+  return (
+    <div>
+        <p>Cureus Journal of Medical Science, Part of Springer Nature</p>
     </div>
   );
 };

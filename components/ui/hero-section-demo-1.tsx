@@ -23,14 +23,14 @@ export default function HeroSectionOne() {
         <Image
           height={500}
           width={500}
-          src="/uday-doodle.png"
-          alt="udays-doodle"
-          className=" !m-0 h-60 w-60 md:h-72 md:w-72 rounded-full border-2 border-white object-cover object-top !p-0 "
+          src="/profile-pic.jpg"
+          alt="udays-pic"
+          className=" mt-10 h-60 w-60 md:h-72 md:w-72 rounded-full border-2 border-white object-cover object-top  "
         />
       </div>
       <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-8">
         <h1 className=" mx-auto max-w-4xl text-center text-2xl font-medium text-slate-700 md:text-3xl lg:text-5xl dark:text-slate-300">
-          {"Hi i'm Uday Kumar"
+          {"Hi i'm Dr. Uday Kumar"
             .split(" ")
             .map((word, index) => (
               <motion.span
