@@ -119,7 +119,7 @@ export default function HeroSectionOne() {
           }}
           className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-3 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
         >
-          <div className="  p-5 w-full overflow-hidden border-gray-300 dark:border-gray-700 flex flex-col gap-5 md:gap-10">
+          <div className="  p-5 w-full overflow-hidden flex flex-col gap-5 md:gap-10">
             <div>
               <p className=" text-center text-3xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700">
                 Affiliations & Accreditations
