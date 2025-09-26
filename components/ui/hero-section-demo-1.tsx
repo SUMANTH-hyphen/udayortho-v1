@@ -30,7 +30,7 @@ export default function HeroSectionOne() {
       </div>
       <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-8">
         <h1 className=" mx-auto max-w-4xl text-center text-2xl font-medium text-slate-700 md:text-3xl lg:text-5xl dark:text-slate-300">
-          {"Hi i'm Uday Kumar"
+          {"Hi i&apos;m Uday Kumar"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -125,12 +125,12 @@ export default function HeroSectionOne() {
                 Affiliations & Accreditations
               </p>
               <p className=" text-center text-md max-w-8xl text-gray-600 lg:text-xl">
-                “Memberships and recognition across leading orthodontic bodies and international journals.”
+                Memberships and recognition across leading orthodontic bodies and international journals.
               </p>
             </div>
             <div className=" flex flex-col gap-5">
               <p className=" text-start text-sm  md:text-md font-semibold text-slate-700">
-                "I am Dr. Uday Kumar Alle, a Specialist Orthodontist dedicated to delivering high-quality orthodontic care with compassion and precision. With over two decades of international experience across the UAE, Saudi Arabia, and India, I specialize in transforming smiles through advanced orthodontic techniques including Invisalign, self-ligating brackets, and surgical orthodontics. My focus is on patient comfort, communication, and achieving life-changing results."
+                I am Dr. Uday Kumar Alle, a Specialist Orthodontist dedicated to delivering high-quality orthodontic care with compassion and precision. With over two decades of international experience across the UAE, Saudi Arabia, and India, I specialize in transforming smiles through advanced orthodontic techniques including Invisalign, self-ligating brackets, and surgical orthodontics. My focus is on patient comfort, communication, and achieving life-changing results.
               </p>
               <OverlapCards />
             </div>
@@ -154,7 +154,7 @@ const Navbar = () => {
           alt="udays-doodle"
           className="size-9 rounded-full +"
         /> */}
-        <h1 className="text-base font-bold md:text-2xl">Uday's Portfolio</h1>
+        <h1 className="text-base font-bold md:text-2xl">Uday&apos;s Portfolio</h1>
       </div>
       {/* remove */}
       {/* <button className="w-24 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 md:w-32 dark:bg-white dark:text-black dark:hover:bg-gray-200">

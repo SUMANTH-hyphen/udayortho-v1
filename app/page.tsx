@@ -8,7 +8,7 @@ import { Timeline } from "@/components/ui/timeline";
 import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
 import ScreenWrapper from "@/components/wrappers/screen-wrapper";
 import { HeadingTextWrapper, NormalTextWrapper } from "@/components/wrappers/text-wrapper";
-import { User, Settings, HomeIcon } from "lucide-react"
+// import { User, Settings, HomeIcon 0} from "lucide-react"
 import React from "react";
 
 const accomplishments = [
@@ -50,23 +50,23 @@ const accomplishments = [
   }
 ]
 
-const icons = [
-  {
-    title: "Home",
-    icon: <HomeIcon className="w-5 h-5" />,
-    href: "/",
-  },
-  {
-    title: "Profile",
-    icon: <User className="w-5 h-5" />,
-    href: "/profile",
-  },
-  {
-    title: "Settings",
-    icon: <Settings className="w-5 h-5" />,
-    href: "/settings",
-  },
-]
+// const icons = [
+//   {
+//     title: "Home",
+//     icon: <HomeIcon className="w-5 h-5" />,
+//     href: "/",
+//   },
+//   {
+//     title: "Profile",
+//     icon: <User className="w-5 h-5" />,
+//     href: "/profile",
+//   },
+//   {
+//     title: "Settings",
+//     icon: <Settings className="w-5 h-5" />,
+//     href: "/settings",
+//   },
+// ]
 
 const experience = [
   {

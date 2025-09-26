@@ -47,7 +47,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
+        {data.map((item) => (
           <div
             key={`${item.key}-${item.title}`}
             className="flex justify-start pt-5 md:pt-15 md:gap-5 lg:gap-10"
