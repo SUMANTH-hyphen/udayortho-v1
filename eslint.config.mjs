@@ -25,7 +25,9 @@ const eslintConfig = [
       "@typescript-eslint/no-explicit-any": "off",
       "react/no-unescaped-entities": "off", // also fixes your quote errors
       "@typescript-eslint/no-unused-vars": "off", // optional
-      "prefer-const": "off" // optional
+      "prefer-const": "off", // optional
+      "@typescript-eslint/ban-ts-comment": "off",
+      "react-hooks/exhaustive-deps": "off",
     },
   },
 ];

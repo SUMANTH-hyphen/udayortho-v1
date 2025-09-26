@@ -279,7 +279,7 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
-  }, [size.width, size.height, source, getUniforms]);
+  }, [size, source, getUniforms]);
 
   return (
     <mesh ref={ref as React.RefObject<THREE.Mesh>}>
