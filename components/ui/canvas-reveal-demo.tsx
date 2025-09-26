@@ -37,7 +37,7 @@ export function CanvasRevealEffectDemo() {
           />
         </Card>
 
-        <Card title="A Novel Appointment Protocol to Accelerate Orthodontic Treatment. This publication presents an scheduling approach aimed at improving orthodontic efficiency while ensuring patient comfort." icon={<CardIcon3 />}>
+        <Card title="A Novel Appointment Protocol to Accelerate Orthodontic Treatment: A Case Report, published May 25, 2025 in the Cureus Journal of Medical Science, part of Springer Nature." icon={<CardIcon3 />}>
           <CanvasRevealEffect
             animationSpeed={4}
             containerClassName="bg-rose-500"
@@ -112,7 +112,7 @@ const CardIcon2 = () => {
 const CardIcon3 = () => {
   return (
     <div>
-        <p>Cureus Journal of Medical Science, Part of Springer Nature</p>
+        <p>A Novel Appointment protocol to Accelerate Orthodontic Treatment</p>
     </div>
   );
 };

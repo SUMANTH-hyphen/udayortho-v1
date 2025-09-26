@@ -30,7 +30,7 @@ export default function HeroSectionOne() {
       </div>
       <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-8">
         <h1 className=" mx-auto max-w-4xl text-center text-2xl font-medium text-slate-700 md:text-3xl lg:text-5xl dark:text-slate-300">
-          {"Hi i'm Dr. Uday Kumar"
+          {"Hi I'm Dr. Uday Kumar"
             .split(" ")
             .map((word, index) => (
               <motion.span

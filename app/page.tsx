@@ -192,6 +192,21 @@ const experience = [
 
 const patents = [
   {
+    title: "Inverted Orthodontic Retraction Loops with Occlusal Application",
+    description: "UK Design Patent Granted · June 2025",
+    link: "",
+  },
+  {
+    title: "Multi-Purpose Orthodontic Tweezer",
+    description: "Indian Design Patent pending · July 2025",
+    link: "",
+  },
+  {
+    title: "Orthodontic Retraction Loop",
+    description: "Indian Design Patent pending · July 2025",
+    link: "",
+  },
+  {
     title: "Self-Ligating Orthodontic Accessory Eyelet Bracket",
     description: "Indian Utility and Design Patent pending · August 2025",
     link: "",
@@ -202,28 +217,13 @@ const patents = [
     link: "",
   },
   {
-    title: "Multi-Purpose Orthodontic Tweezer",
-    description: "Indian Design Patent pending · July 2025",
-    link: "",
-  },
-  {
     title: "Orthodontic Archwire Bending Device",
     description: "Indian Utility and Design Patent pending · August 2025",
     link: "",
   },
   {
-    title: "Orthodontic Retraction Loop",
-    description: "Indian Design Patent pending · July 2025",
-    link: "",
-  },
-  {
     title: "Orthodontic Archwire Distal Bending Device",
     description: "Indian Design Patent · August 2025",
-    link: "",
-  },
-  {
-    title: "Inverted Orthodontic Retraction Loops with Occlusal Application",
-    description: "UK Design Patent Granted · June 2025",
     link: "",
   },
   {
