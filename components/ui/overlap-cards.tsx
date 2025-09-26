@@ -1,7 +1,5 @@
 "use client"
 
-import { motion } from "motion/react";
-import { Card, FocusCards } from "./focus-cards";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 

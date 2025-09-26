@@ -1,9 +1,7 @@
 import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-demo";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { FeaturesSectionDemo1 } from "@/components/ui/features-section-demo-1";
 import FeaturesSectionDemo from "@/components/ui/features-section-demo-2";  
-import { FloatingDock } from "@/components/ui/floating-dock";
 import HeroSectionOne from "@/components/ui/hero-section-demo-1";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
@@ -317,7 +315,7 @@ export default function Home() {
 
         <MaxWidthWrapper className="flex flex-col items-center w-full gap-10 my-20 md:gap-16 md:my-32 ">
           <HeadingTextWrapper className="text-2xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700 dark:text-slate-300 text-center" >
-            "Recognitions that celebrate dedication, innovation, and patient care."
+            &quot;Recognitions that celebrate dedication, innovation, and patient care.&quot;
           </HeadingTextWrapper>
           <div className="relative w-full max-w-full overflow-visible">
             {/* Optional: fade effect overlays */}
