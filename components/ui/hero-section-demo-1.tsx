@@ -155,15 +155,15 @@ const Navbar = () => {
       <div className="flex items-center gap-2">
 
         {/* Future - Logo */}
-        {/* <div className="size-7 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" />
+        {/* <div className="size-7 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" /> */}
         <Image
           height={500}
           width={500}
-          src="uday-doodle.png"
-          alt="udays-doodle"
-          className="size-9 rounded-full +"
-        /> */}
-        <RandomTextWrapper className="text-base font-bold md:text-2xl">Uday&apos;s Portfolio</RandomTextWrapper>
+          src="/logo.png"
+          alt="udays-logo"
+          className="size-9 +"
+        />
+        {/* <RandomTextWrapper className="text-base font-bold md:text-2xl">Uday&apos;s Portfolio</RandomTextWrapper> */}
       </div>
     </nav>
   );

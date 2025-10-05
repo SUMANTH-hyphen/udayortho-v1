@@ -384,7 +384,7 @@ export default function Home() {
           </div>
         </nav>
         <aside>
-          <RandomTextWrapper className=" text-white">Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</RandomTextWrapper>
+          <RandomTextWrapper className=" text-white">Copyright © {new Date().getFullYear()} — All rights reserved by Dr. Uday Kumar Alle.</RandomTextWrapper>
         </aside>
       </footer>
     </div>
