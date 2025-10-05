@@ -3,6 +3,7 @@ import React from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { RandomTextWrapper } from "../wrappers/text-wrapper";
 
 export function CanvasRevealEffectDemo() {
   return (
@@ -11,7 +12,7 @@ export function CanvasRevealEffectDemo() {
         <Card title="Published as a book chapter in IntechOpen Textbook, December 2023. This work introduces a structured approach to understanding and categorizing self-ligating bracket systems for orthodontic practice." icon={<CardIcon1 />}>
           <CanvasRevealEffect
             animationSpeed={4}
-            containerClassName="bg-emerald-900"
+            containerClassName="bg-[#8661D2]"
           />
         </Card>
 
@@ -32,7 +33,7 @@ export function CanvasRevealEffectDemo() {
         <Card title="Published in Cureus Journal of Medical Science (Springer Nature), July 2023. The article explores innovative methods to improve orthodontic extractions through interproximal reduction techniques." icon={<CardIcon2 />}>
           <CanvasRevealEffect
             animationSpeed={4}
-            containerClassName="bg-sky-600"
+            containerClassName="bg-[#121345]"
             colors={[[125, 211, 252]]}
           />
         </Card>
@@ -40,7 +41,7 @@ export function CanvasRevealEffectDemo() {
         <Card title="A Novel Appointment Protocol to Accelerate Orthodontic Treatment: A Case Report, published May 25, 2025 in the Cureus Journal of Medical Science, part of Springer Nature." icon={<CardIcon3 />}>
           <CanvasRevealEffect
             animationSpeed={4}
-            containerClassName="bg-rose-500"
+            containerClassName="bg-[#535EF9]"
             colors={[[125, 211, 252]]}
           />
         </Card>
@@ -86,10 +87,10 @@ const Card = ({
         <div className="text-center group-hover/canvas-card:-translate-y-1 group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center text-slate-700 text-2xl ">
           {icon}
         </div>
-        <h2 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 text-black w-full mx-auto flex items-center justify-center font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-4 transition duration-200">
+        <RandomTextWrapper className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 text-black w-full mx-auto flex items-center justify-center font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-4 transition duration-200">
           {title}
-        </h2>
-        <p className=" text-xs font-medium text-slate-500 dark:text-slate-300 tracking-wide group-hover/canvas-card:-translate-y-1 group-hover/canvas-card:opacity-0 transition duration-200 border rounded-2xl p-2 w-fit  ">Hover to Reveal</p>
+        </RandomTextWrapper>
+        <RandomTextWrapper className=" text-xs font-medium text-slate-500 dark:text-slate-300 tracking-wide group-hover/canvas-card:-translate-y-1 group-hover/canvas-card:opacity-0 transition duration-200 border rounded-lg p-2 w-fit it  ">Hover to Reveal</RandomTextWrapper>
       </div>
     </div>
   );
@@ -98,21 +99,21 @@ const Card = ({
 const CardIcon1 = () => {
   return (
     <div>
-        <p>Classification System for Self-Ligating Brackets</p>
+        <RandomTextWrapper>Classification System for Self-Ligating Brackets</RandomTextWrapper>
     </div>
   );
 };
 const CardIcon2 = () => {
   return (
     <div>
-        <p>Interproximal Reduction Facilitating Orthodontic Teeth Extraction</p>
+        <RandomTextWrapper>Interproximal Reduction Facilitating Orthodontic Teeth Extraction</RandomTextWrapper>
     </div>
   );
 };
 const CardIcon3 = () => {
   return (
     <div>
-        <p>A Novel Appointment protocol to Accelerate Orthodontic Treatment</p>
+        <RandomTextWrapper>A Novel Appointment protocol to Accelerate Orthodontic Treatment</RandomTextWrapper>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useCallback, useEffect, useState } from "react";
+import { RandomTextWrapper } from "../wrappers/text-wrapper";
 
 export const InfiniteMovingCards = ({
   items,
@@ -77,7 +78,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-8xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]",
+        "scroller relative z-20 max-w-8xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_9%,black_92%,transparent)] ",
         className,
       )}
     >
@@ -91,7 +92,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-gradient-to-b from-[#f7f8ff] via-[#eef0ff] to-[#e7e9ff] px-8 py-6 md:w-[450px] "
             key={item.key}
           >
             <blockquote>
@@ -99,19 +100,19 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
+              <span className="relative z-20 text-base md:text-lg leading-[1.6] text-[#121345] ">
                 {item.quote}
               </span>
               {
                 item.name && item.title && (
                   <div className="relative z-20 mt-6 flex flex-row items-center">
                     <span className="flex flex-col gap-1">
-                      <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
+                      <RandomTextWrapper className="text-sm leading-[1.6] italic text-[#121345] ">
                         {item.name}
-                      </span>
-                      <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
+                      </RandomTextWrapper>
+                      <RandomTextWrapper className="text-sm leading-[1.6] italic text-[#121345] ">
                         {item.title}
-                      </span>
+                      </RandomTextWrapper>
                     </span>
                   </div>
                 )

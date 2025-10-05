@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "motion/react";
-import { OverlapCards } from "./overlap-cards";
 import Image from "next/image";
+import { HeadingTextWrapper, NormalTextWrapper, RandomTextWrapper, TaglineTextWrapper } from "../wrappers/text-wrapper";
+import { BackgroundGradient } from "./background-gradient";
+import { GlowingEffectDemoSecond } from "./glowing-effect-demo";
 
 
 export default function HeroSectionOne() {
@@ -29,8 +31,8 @@ export default function HeroSectionOne() {
         />
       </div>
       <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-8">
-        <h1 className=" mx-auto max-w-4xl text-center text-2xl font-medium text-slate-700 md:text-3xl lg:text-5xl dark:text-slate-300">
-          {"Hi I'm Dr. Uday Kumar"
+        <HeadingTextWrapper className=" mx-auto max-w-4xl md:text-4xl ">
+          {"Hello I'm Dr. Uday Kumar"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -47,9 +49,9 @@ export default function HeroSectionOne() {
                 {word}
               </motion.span>
             ))}
-        </h1>
+        </HeadingTextWrapper>
         <div className=" md:row-span-2">
-          <h1 className="relative z-10 mx-auto max-w-8xl text-center text-3xl font-semibold text-slate-700 md:text-4xl lg:font-bold lg:text-5xl dark:text-slate-300">
+          <HeadingTextWrapper className=" relative z-10 mx-auto max-w-8xl text-3xl">
             {"Transforming Smiles with Expertise & Compassion"
               .split(" ")
               .map((word, index) => (
@@ -67,23 +69,26 @@ export default function HeroSectionOne() {
                   {word}
                 </motion.span>
               ))}
-          </h1>
-          <motion.p
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.3,
-              delay: 0.8,
-            }}
-            className="relative z-10 mx-auto max-w-2xl py-4 text-center text-sm md:text-xl font-normal text-neutral-600 dark:text-neutral-400"
-          >
-            Dr. Uday Kumar Alle – Specialist Orthodontist with 20+ years of experience in creating confident smiles across UAE, Saudi Arabia, and India.
-          </motion.p>
+          </HeadingTextWrapper>
+          <TaglineTextWrapper className=" relative z-10 mx-auto max-w-4xl md:max-w-3xl lg:max-w-4xl py-4 text-sm">
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.3,
+                delay: 0.8,
+              }}
+            >
+              Dr. Uday Kumar Alle – Specialist Orthodontist with 20+ years of experience in creating confident smiles across UAE, Saudi Arabia, and India.
+            </motion.p>
+          </TaglineTextWrapper>
         </div>
+
+        {/* Future - Buttons */}
         {/* <motion.div
           initial={{
             opacity: 0,
@@ -117,24 +122,27 @@ export default function HeroSectionOne() {
             duration: 0.3,
             delay: 1.2,
           }}
-          className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-3 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+          className="relative z-10 mt-20  "
         >
-          <div className="  p-5 w-full overflow-hidden flex flex-col gap-5 md:gap-10">
+        <BackgroundGradient className="rounded-[22px] md:p-4 bg-white dark:bg-zinc-900"> 
+          <div className="  p-4 w-full overflow-hidden flex flex-col gap-5 md:gap-10">
             <div>
-              <p className=" text-center text-3xl font-semibold md:text-3xl lg:font-bold lg:text-5xl text-slate-700">
+              <HeadingTextWrapper className="">
                 Affiliations & Accreditations
-              </p>
-              <p className=" text-center text-md max-w-8xl text-gray-600 lg:text-xl">
+              </HeadingTextWrapper>
+              <TaglineTextWrapper className="">
                 Memberships and recognition across leading orthodontic bodies and international journals.
-              </p>
+              </TaglineTextWrapper>
             </div>
             <div className=" flex flex-col gap-5">
-              <p className=" text-start text-sm  md:text-md font-semibold text-slate-700">
+              <NormalTextWrapper>
                 I am Dr. Uday Kumar Alle, a Specialist Orthodontist dedicated to delivering high-quality orthodontic care with compassion and precision. With over two decades of international experience across the UAE, Saudi Arabia, and India, I specialize in transforming smiles through advanced orthodontic techniques including Invisalign, self-ligating brackets, and surgical orthodontics. My focus is on patient comfort, communication, and achieving life-changing results.
-              </p>
-              <OverlapCards />
+              </NormalTextWrapper>
+              <GlowingEffectDemoSecond />
             </div>
           </div>
+        </BackgroundGradient>
+
         </motion.div>
       </div>
     </div>
@@ -146,20 +154,17 @@ const Navbar = () => {
     <nav className="flex w-full items-center justify-between border-t border-b border-neutral-200 px-4 py-4 dark:border-neutral-800">
       <div className="flex items-center gap-2">
 
-        {/* <div className="size-7 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" /> */}
-        {/* <Image
+        {/* Future - Logo */}
+        {/* <div className="size-7 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" />
+        <Image
           height={500}
           width={500}
           src="uday-doodle.png"
           alt="udays-doodle"
           className="size-9 rounded-full +"
         /> */}
-        <h1 className="text-base font-bold md:text-2xl">Uday&apos;s Portfolio</h1>
+        <RandomTextWrapper className="text-base font-bold md:text-2xl">Uday&apos;s Portfolio</RandomTextWrapper>
       </div>
-      {/* remove */}
-      {/* <button className="w-24 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 md:w-32 dark:bg-white dark:text-black dark:hover:bg-gray-200">
-        Login
-      </button> */}
     </nav>
   );
 };

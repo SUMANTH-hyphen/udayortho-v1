@@ -6,19 +6,19 @@ interface TextWrapperProps extends HTMLAttributes<HTMLDivElement> {
     children?: ReactNode;
 }
 
-const CursiveTextWrapper = forwardRef<HTMLDivElement, TextWrapperProps>(({ className, children, ...rest }, ref) => {
+const TaglineTextWrapper = forwardRef<HTMLDivElement, TextWrapperProps>(({ className, children, ...rest }, ref) => {
     return (
-        <div className={cn("font-cursive", className)} ref={ref} {...rest}>
+        <div className={cn(" text-[#121345] text-center italic opacity-80 text-md md:text-lg lg:text-2xl ", className)} ref={ref} {...rest}>
             {children}
         </div>
     );
 });
 
-CursiveTextWrapper.displayName = 'CursiveTextWrapper'; // Set display name for eslintreact/display-name
+TaglineTextWrapper.displayName = 'TaglineTextWrapper'; // Set display name for eslintreact/display-name
 
 const HeadingTextWrapper = forwardRef<HTMLDivElement, TextWrapperProps>(({ className, children, ...rest }, ref) => {
     return (
-        <div className={cn(" text-center text-xl font-bold text-slate-700 md:text-3xl lg:text-4xl dark:text-slate-300", className)} ref={ref} {...rest}>
+        <div className={cn(" text-[#121345] text-3xl font-semibold text-center md:text-3xl lg:text-5xl lg:font-bold", className)} ref={ref} {...rest}>
             {children}
         </div>
     );
@@ -28,7 +28,7 @@ HeadingTextWrapper.displayName = 'HeadingTextWrapper'; // Set display name for e
 
 const NormalTextWrapper = forwardRef<HTMLDivElement, TextWrapperProps>(({ className, children, ...rest }, ref) => {
     return (
-        <div className={cn("font-normal", className)} ref={ref} {...rest}>
+        <div className={cn(" text-start text-sm lg:text-lg", className)} ref={ref} {...rest}>
             {children}
         </div>
     );
@@ -36,4 +36,14 @@ const NormalTextWrapper = forwardRef<HTMLDivElement, TextWrapperProps>(({ classN
 
 NormalTextWrapper.displayName = 'NormalTextWrapper'; // Set display name for eslintreact/display-name
 
-export { CursiveTextWrapper, HeadingTextWrapper, NormalTextWrapper };
+const RandomTextWrapper = forwardRef<HTMLDivElement, TextWrapperProps>(({ className, children, ...rest }, ref) => {
+    return (
+        <div className={cn("", className)} ref={ref} {...rest}>
+            {children}
+        </div>
+    );
+});
+
+RandomTextWrapper.displayName = 'RandomTextWrapper'; // Set display name for eslintreact/display-name
+
+export { TaglineTextWrapper, HeadingTextWrapper, NormalTextWrapper, RandomTextWrapper };

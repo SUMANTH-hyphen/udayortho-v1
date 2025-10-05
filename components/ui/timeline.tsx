@@ -5,6 +5,7 @@ import {
   motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { HeadingTextWrapper, RandomTextWrapper, TaglineTextWrapper } from "../wrappers/text-wrapper";
 
 interface TimelineEntry {
   key: string;
@@ -38,12 +39,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-8xl mx-3 md:mx-auto mt-10 py-5 md:py-20 lg:px-10">
-        <h2 className=" mb-1 md:mb-3 text-3xl font-semibold md:text-4xl lg:font-bold lg:text-5xl text-slate-700 dark:text-slate-300">
+        <HeadingTextWrapper className=" text-start mb-1 md:mb-3">
           The Journey So Far
-        </h2>
-        <p className=" text-md max-w-8xl lg:text-2xl text-slate-700 dark:text-slate-300 ">
+        </HeadingTextWrapper >
+        <TaglineTextWrapper className=" text-start">
           From classrooms to clinics, here&apos;s a glimpse of my path in dentistry and orthodontics.
-        </p>
+        </TaglineTextWrapper>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -54,17 +55,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+                <div className="h-4 w-4 rounded-full bg-[#121345] border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-2xl lg:text-3xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <RandomTextWrapper className="hidden md:block text-xl md:pl-20 md:text-2xl lg:text-3xl font-medium text-[#121345] opacity-80 italic ">
                 {item.title}
-              </h3>
+              </RandomTextWrapper>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title}
-              </h3>
+              <RandomTextWrapper className="md:hidden block text-2xl mb-4 text-left font-bold  text-[#121345]">
+                {item.title}  
+              </RandomTextWrapper>
               {item.content}{" "}
             </div>
           </div>
@@ -80,7 +81,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-violet-600 via-[#535EF9] to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
