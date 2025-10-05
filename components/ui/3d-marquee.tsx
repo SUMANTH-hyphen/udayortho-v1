@@ -18,7 +18,7 @@ export const ThreeDMarquee = ({
   return (
     <div
       className={cn(
-        "mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-100",
+        "mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-120",
         className,
       )}
     >
@@ -28,7 +28,7 @@ export const ThreeDMarquee = ({
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
+            className="relative top-96 right-[55%] md:right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div

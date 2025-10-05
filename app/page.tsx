@@ -293,7 +293,7 @@ export default function Home() {
         </ScreenWrapper>
 
         {/* Skills & Expertise */}
-        <ScreenWrapper id="skills#5" className=" flex flex-col justify-end px-3 ">
+        <ScreenWrapper id="skills#5" className=" flex flex-col justify-end md:px-3 ">
           <HeadingTextWrapper className=" text-start md:text-center mt-10 py-10 md:mt-32 md:py-20 ">
             Skills and expertise to transform smiles with care
           </HeadingTextWrapper>
@@ -384,7 +384,7 @@ export default function Home() {
           </div>
         </nav>
         <aside>
-          <RandomTextWrapper className=" text-white">Copyright © {new Date().getFullYear()} — All rights reserved by Dr. Uday Kumar Alle.</RandomTextWrapper>
+          <RandomTextWrapper className=" text-white text-center">Copyright © {new Date().getFullYear()} — All rights reserved by Dr. Uday Kumar Alle.</RandomTextWrapper>
         </aside>
       </footer>
     </div>

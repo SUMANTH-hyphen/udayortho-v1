@@ -96,7 +96,7 @@ const Feature = ({
   return (
     <div
       className={cn(
-        "flex flex-col justify-center items-start lg:border-r py-5 relative group/feature ",
+        "flex flex-col justify-center items-start lg:border-r py-5 px-5 md:px-0 relative group/feature ",
         (index === 0 || index === 4 || index === 8) && "lg:border-l ",
         index < 8 && "lg:border-b "
       )}

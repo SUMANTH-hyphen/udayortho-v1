@@ -28,7 +28,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <a
-          href={item?.link}
+          // href={item?.link}
           key={item?.link || idx} // use index as fallback
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -105,7 +105,7 @@ export const CardDescription = ({
   return (
     <RandomTextWrapper
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm italic",
         className
       )}
     >
