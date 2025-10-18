@@ -5,11 +5,11 @@ import { RandomTextWrapper } from "../wrappers/text-wrapper";
 export function FeaturesSectionDemo1() {
     return (
         <div className="">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-2 max-w-7xl mx-auto">
                 {grid.map((feature) => (
                     <div
                         key={feature.title}
-                        className="relative bg-gradient-to-b from-[#535EF9]/20 via-[#535EF9]/5 to-white p-6 rounded-3xl overflow-hidden"
+                        className="relative bg-gradient-to-b from-[#535EF9]/20 via-[#535EF9]/15 to-[#535EF9]/5 p-6 rounded-3xl overflow-hidden"
                     >
                         <Grid size={20} />
                         <RandomTextWrapper className="text-base font-bold text-neutral-800 relative z-20">

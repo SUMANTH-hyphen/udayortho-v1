@@ -3,9 +3,6 @@ import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 
 export function ThreeDMarqueeDemo() {
   const images = [
-    "/marque1.jpg",
-    "/marque2.jpg",
-    "/marque3.jpg",
     "/marque6.jpg",
     "/marque10.jpg",
     "/marque4.jpg",
@@ -20,12 +17,6 @@ export function ThreeDMarqueeDemo() {
     "/marque6.jpg",
     "/marque9.jpg",
     "/marque4.jpg",
-    "/marque3.jpg",
-    "/marque2.jpg",
-    "/marque1.jpg",
-    "/marque1.jpg",
-    "/marque2.jpg",
-    "/marque3.jpg",
     "/marque4.jpg",
     "/marque9.jpg",
     "/marque6.jpg",

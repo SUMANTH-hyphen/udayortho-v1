@@ -20,25 +20,24 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
+        "rounded-lg relative dark:bg-neutral-900 overflow-hidden h-[18rem] md:h-[20rem] lg:h-[25rem] w-full transition-all duration-500 ease-out transform",
+        hovered === index && " md:scale-[1.05] z-10", // zoom effect on hover
+        hovered !== null && hovered !== index && "blur-sm scale-[0.97]"
       )}
     >
       <Image
+        height={500}
+        width={500}
         src={card.src}
         alt={card.title}
         className="object-cover absolute inset-0"
       />
       <div
         className={cn(
-          "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
+          "absolute inset-0 bg-black/10 flex items-end py-8 px-4 transition-opacity duration-300",
           hovered === index ? "opacity-100" : "opacity-0"
         )}
-      >
-        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          {card.title}
-        </div>
-      </div>
+      ></div>
     </div>
   )
 );
@@ -54,16 +53,32 @@ export function FocusCards({ cards }: { cards: Card[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
+    // <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-5 max-w-6xl mx-auto w-full">
+    //   {cards.map((card, index) => (
+    //     <Card
+    //       key={index}
+    //       card={card}
+    //       index={index}
+    //       hovered={hovered}
+    //       setHovered={setHovered}
+    //     />
+    //   ))}
+    // </div>
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5 max-w-6xl mx-auto w-full" >
       {cards.map((card, index) => (
-        <Card
-          key={card.title}
-          card={card}
-          index={index}
-          hovered={hovered}
-          setHovered={setHovered}
-        />
+        <div
+          key={index}
+          className={`${index === 2 ? "col-span-1 justify-normal w-full md:col-span-2 md:justify-self-center md:w-1/2 lg:col-span-1 lg:justify-normal lg:w-full" : ""}`}
+        >
+          <Card
+            card={card}
+            index={index}
+            hovered={hovered}
+            setHovered={setHovered}
+          />
+        </div>
       ))}
     </div>
+
   );
 }

@@ -1,12 +1,13 @@
-import { ThreeDMarqueeDemo } from "@/components/ui/3d-marquee-demo";
 import { AppleCardsCarouselDemo } from "@/components/ui/apple-cards-demo";
 import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-demo";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { FeaturesSectionDemo1 } from "@/components/ui/features-section-demo-1";
 import FeaturesSectionDemo from "@/components/ui/features-section-demo-2";
+import { FocusCardsDemo } from "@/components/ui/focus-cards-demo";
+import GalleryDemo from "@/components/ui/gallery-demo";
 import HeroSectionOne from "@/components/ui/hero-section-demo-1";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
+import { WobbleCardDemo } from "@/components/ui/wobble-card-demo";
 import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
 import ScreenWrapper from "@/components/wrappers/screen-wrapper";
 import { HeadingTextWrapper, NormalTextWrapper, RandomTextWrapper, TaglineTextWrapper } from "@/components/wrappers/text-wrapper";
@@ -158,7 +159,7 @@ const experience = [
 const patents = [
   {
     title: "Inverted Orthodontic Retraction Loops with Occlusal Application",
-    description: "UK Design Patent Granted · June 2025",
+    description: "",
     link: "",
   },
   {
@@ -280,11 +281,13 @@ export default function Home() {
         <HeroSectionOne />
 
         {/* Patents */}
-        <ScreenWrapper className="max-w-7xl mx-auto mt-20 px-4 md:px-8 flex flex-col items-center justify-center">
-          <HeadingTextWrapper >
+        <ScreenWrapper className="max-w-8xl mx-auto mt-20 px-4 md:px-8 flex flex-col items-center justify-center">
+          <HeadingTextWrapper className=" my-10" >   
             Innovations shaping the future of orthodontics
           </HeadingTextWrapper>
-          <HoverEffect items={patents} />
+          {/* <HoverEffect items={patents} /> */}
+          <WobbleCardDemo />
+          {/* <BentoGridDemo /> */}
         </ScreenWrapper>
 
         {/* Education & Experience Timeline */}
@@ -300,38 +303,52 @@ export default function Home() {
           <FeaturesSectionDemo />
         </ScreenWrapper>
 
+
+        {/* Fellowships */}
+        <ScreenWrapper className="md:min-h-auto md:h-[80vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
+          <HeadingTextWrapper className="" >
+            Fellowships that recognize excellence in orthodontics
+          </HeadingTextWrapper>
+          <FeaturesSectionDemo1 />
+        </ScreenWrapper>
+
+
         {/* Accomplishments & Recognitions */}
-        <MaxWidthWrapper className="flex flex-col items-center w-full gap-10 my-20 md:gap-16 md:my-32 ">
+        <MaxWidthWrapper className="flex flex-col items-center w-full my-0  ">
           <AppleCardsCarouselDemo />
         </MaxWidthWrapper>
 
+
+        {/* Books */}
+        <ScreenWrapper className=" md:min-h-auto md:h-[80vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
+          <HeadingTextWrapper className="" >   
+            Books Collaborated On and Contributed To
+          </HeadingTextWrapper>
+          <FocusCardsDemo />
+        </ScreenWrapper>
+
+
         {/* Publications */}
-        <MaxWidthWrapper className=" md:grid auto-rows-auto lg:flex lg:flex-col items-center justify-evenly gap-10 my-20 md:gap-12 md:my-0  ">
+        <MaxWidthWrapper className=" grid auto-rows-auto lg:flex lg:flex-col items-center justify-center gap-10 md:mt-20 md:gap-14 ">
           <div>
-            <HeadingTextWrapper className=" mb-3 " >
-              Publications in orthodontic science
+            <HeadingTextWrapper className=" mb-1 " >
+              Publications in orthodontics
             </HeadingTextWrapper>
             <TaglineTextWrapper>
-              Contributing knowledge to shape the future of orthodontics
+              Published Works and Contributions in Orthodontics
             </TaglineTextWrapper>
           </div>
           <CanvasRevealEffectDemo />
         </MaxWidthWrapper>
 
-        {/* Fellowships */}
-        <MaxWidthWrapper className="flex flex-col items-center max-w-8xl gap-10 my-20 md:gap-16 md:my-32 ">
-          <HeadingTextWrapper className="" >
-            Fellowships that recognize excellence in orthodontics
-          </HeadingTextWrapper>
-          <FeaturesSectionDemo1 />
-        </MaxWidthWrapper>
 
-        <MaxWidthWrapper className=" max-w-10xl">
+        {/* <MaxWidthWrapper className=" max-w-10xl">
           <ThreeDMarqueeDemo />
-        </MaxWidthWrapper>
+        </MaxWidthWrapper> */}
+        
 
         {/* Presentations & Workshops */}
-        <MaxWidthWrapper className="flex flex-col items-center w-full gap-10 my-20 md:gap-16 md:my-32 ">
+        <ScreenWrapper className=" md:min-h-auto md:h-[60vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center gap-14 md:gap-10 lg:gap-14 ">
           <HeadingTextWrapper className="" >
             Presentations
           </HeadingTextWrapper>
@@ -346,6 +363,15 @@ export default function Home() {
               className="relative"
             />
           </div>
+        </ScreenWrapper>
+        
+
+        {/* wall of fame */}
+        <MaxWidthWrapper className=" max-w-9xl flex flex-col items-center ">
+          <HeadingTextWrapper className="" >   
+            Wall of Fame
+          </HeadingTextWrapper>
+          <GalleryDemo />
         </MaxWidthWrapper>
 
       </main>

@@ -8,7 +8,7 @@ import { RandomTextWrapper } from "../wrappers/text-wrapper";
 export function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+      <div className=" flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
         <Card title="Published as a book chapter in IntechOpen Textbook, December 2023. This work introduces a structured approach to understanding and categorizing self-ligating bracket systems for orthodontic practice." icon={<CardIcon1 />}>
           <CanvasRevealEffect
             animationSpeed={4}
