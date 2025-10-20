@@ -1,9 +1,11 @@
 import { AppleCardsCarouselDemo } from "@/components/ui/apple-cards-demo";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-demo";
 import { FeaturesSectionDemo1 } from "@/components/ui/features-section-demo-1";
 import FeaturesSectionDemo from "@/components/ui/features-section-demo-2";
 import { FocusCardsDemo } from "@/components/ui/focus-cards-demo";
 import GalleryDemo from "@/components/ui/gallery-demo";
+import { GlowingEffectDemoSecond } from "@/components/ui/glowing-effect-demo";
 import HeroSectionOne from "@/components/ui/hero-section-demo-1";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
@@ -14,25 +16,6 @@ import { HeadingTextWrapper, NormalTextWrapper, RandomTextWrapper, TaglineTextWr
 import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react";
 // import { User, Settings, HomeIcon 0} from "lucide-react"
 import React from "react";
-
-// Future - Navbar
-// const icons = [
-//   {
-//     title: "Home",
-//     icon: <HomeIcon className="w-5 h-5" />,
-//     href: "/",
-//   },
-//   {
-//     title: "Profile",
-//     icon: <User className="w-5 h-5" />,
-//     href: "/profile",
-//   },
-//   {
-//     title: "Settings",
-//     icon: <Settings className="w-5 h-5" />,
-//     href: "/settings",
-//   },
-// ]
 
 const experience = [
   {
@@ -156,54 +139,6 @@ const experience = [
   },
 ];
 
-const patents = [
-  {
-    title: "Inverted Orthodontic Retraction Loops with Occlusal Application",
-    description: "",
-    link: "",
-  },
-  {
-    title: "Multi-Purpose Orthodontic Tweezer",
-    description: "Indian Design Patent pending · July 2025",
-    link: "",
-  },
-  {
-    title: "Orthodontic Retraction Loop",
-    description: "Indian Design Patent pending · July 2025",
-    link: "",
-  },
-  {
-    title: "Self-Ligating Orthodontic Accessory Eyelet Bracket",
-    description: "Indian Utility and Design Patent pending · August 2025",
-    link: "",
-  },
-  {
-    title: "Orthodontic Accessory Bracket",
-    description: "Indian Design Patent pending · August 2025",
-    link: "",
-  },
-  {
-    title: "Orthodontic Archwire Bending Device",
-    description: "Indian Utility and Design Patent pending · August 2025",
-    link: "",
-  },
-  {
-    title: "Orthodontic Archwire Distal Bending Device",
-    description: "Indian Design Patent · August 2025",
-    link: "",
-  },
-  {
-    title: "Hygienic Orthodontic Bracket",
-    description: "Indian Design Patent · September 2025",
-    link: "",
-  },
-  {
-    title: "Orthodontic Auxiliary Bracket",
-    description: "Indian Design Patent · September 2025",
-    link: "",
-  },
-];
-
 const presentationsData = [
   {
     key: "0",
@@ -281,31 +216,34 @@ export default function Home() {
         <HeroSectionOne />
 
         {/* Patents */}
-        <ScreenWrapper className="max-w-8xl mx-auto mt-20 px-4 md:px-8 flex flex-col items-center justify-center">
-          <HeadingTextWrapper className=" my-10" >   
+        <ScreenWrapper className=" flex flex-col items-center justify-ceter">
+          <HeadingTextWrapper className=" my-10" >
             Innovations shaping the future of orthodontics
           </HeadingTextWrapper>
-          {/* <HoverEffect items={patents} /> */}
-          <WobbleCardDemo />
-          {/* <BentoGridDemo /> */}
+          {/* <BackgroundGradient className="rounded-[22px] md:p-8 bg-white"> */}
+          <BackgroundGradient containerClassName=" p-4 md:p-10 w-full ">
+            <WobbleCardDemo />
+          </BackgroundGradient>
         </ScreenWrapper>
 
-        {/* Education & Experience Timeline */}
-        <ScreenWrapper className="relative w-full overflow-clip">
-          <Timeline data={experience} />
+
+        {/* Accomplishments & Recognitions */}
+        <ScreenWrapper className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40 lg:my-40 ">
+          <AppleCardsCarouselDemo />
         </ScreenWrapper>
 
-        {/* Skills & Expertise */}
-        <ScreenWrapper id="skills#5" className=" flex flex-col justify-end md:px-3 ">
-          <HeadingTextWrapper className=" text-start md:text-center mt-10 py-10 md:mt-32 md:py-20 ">
-            Skills and expertise to transform smiles with care
+
+        {/* Books */}
+        <ScreenWrapper className=" md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center my-0 md:my-0 gap-14 ">
+          <HeadingTextWrapper className="" >
+            Books Collaborated On and Contributed To
           </HeadingTextWrapper>
-          <FeaturesSectionDemo />
+          <FocusCardsDemo />
         </ScreenWrapper>
 
 
         {/* Fellowships */}
-        <ScreenWrapper className="md:min-h-auto md:h-[80vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
+        <ScreenWrapper className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
           <HeadingTextWrapper className="" >
             Fellowships that recognize excellence in orthodontics
           </HeadingTextWrapper>
@@ -313,23 +251,46 @@ export default function Home() {
         </ScreenWrapper>
 
 
-        {/* Accomplishments & Recognitions */}
-        <MaxWidthWrapper className="flex flex-col items-center w-full my-0  ">
-          <AppleCardsCarouselDemo />
-        </MaxWidthWrapper>
+        {/* Education & Experience Timeline */}
+        <ScreenWrapper className="relative w-full overflow-clip mb-30 mb:md-0">
+          <Timeline data={experience} />
+        </ScreenWrapper>
 
 
-        {/* Books */}
-        <ScreenWrapper className=" md:min-h-auto md:h-[80vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
-          <HeadingTextWrapper className="" >   
-            Books Collaborated On and Contributed To
+        {/* Affiliations  */}
+        <ScreenWrapper className=" md:mt-40">
+          <BackgroundGradient className="rounded-[22px] md:p-4 bg-white">
+            <div className="  p-4 w-full overflow-hidden flex flex-col gap-5 md:gap-10">
+              <div>
+                <HeadingTextWrapper className="">
+                  Affiliations & Accreditations
+                </HeadingTextWrapper>
+                <TaglineTextWrapper className="">
+                  Memberships and recognition across leading orthodontic bodies and international journals.
+                </TaglineTextWrapper>
+              </div>
+              <div className=" flex flex-col gap-5">
+                {/* <NormalTextWrapper>
+                  I am Dr. Uday Kumar Alle, a Specialist Orthodontist dedicated to delivering high-quality orthodontic care with compassion and precision. With over two decades of international experience across the UAE, Saudi Arabia, and India, I specialize in transforming smiles through advanced orthodontic techniques including Invisalign, self-ligating brackets, and surgical orthodontics. My focus is on patient comfort, communication, and achieving life-changing results.
+                </NormalTextWrapper> */}
+                <GlowingEffectDemoSecond />
+              </div>
+            </div>
+          </BackgroundGradient>
+        </ScreenWrapper>
+
+
+        {/* Skills & Expertise */}
+        <ScreenWrapper className=" flex flex-col justify-center my-30 md:my-20 lg:my-30 md:px-3 gap-5 md:gap-10 ">
+          <HeadingTextWrapper className=" text-start md:text-center ">
+            Skills and expertise to transform smiles with care
           </HeadingTextWrapper>
-          <FocusCardsDemo />
+          <FeaturesSectionDemo />
         </ScreenWrapper>
 
 
         {/* Publications */}
-        <MaxWidthWrapper className=" grid auto-rows-auto lg:flex lg:flex-col items-center justify-center gap-10 md:mt-20 md:gap-14 ">
+        <MaxWidthWrapper className=" grid auto-rows-auto lg:flex lg:flex-col items-center justify-center gap-10 md:gap-14 ">
           <div>
             <HeadingTextWrapper className=" mb-1 " >
               Publications in orthodontics
@@ -341,11 +302,6 @@ export default function Home() {
           <CanvasRevealEffectDemo />
         </MaxWidthWrapper>
 
-
-        {/* <MaxWidthWrapper className=" max-w-10xl">
-          <ThreeDMarqueeDemo />
-        </MaxWidthWrapper> */}
-        
 
         {/* Presentations & Workshops */}
         <ScreenWrapper className=" md:min-h-auto md:h-[60vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center gap-14 md:gap-10 lg:gap-14 ">
@@ -364,11 +320,11 @@ export default function Home() {
             />
           </div>
         </ScreenWrapper>
-        
+
 
         {/* wall of fame */}
         <MaxWidthWrapper className=" max-w-9xl flex flex-col items-center ">
-          <HeadingTextWrapper className="" >   
+          <HeadingTextWrapper className="" >
             Wall of Fame
           </HeadingTextWrapper>
           <GalleryDemo />

@@ -5,12 +5,13 @@ import Image from "next/image";
 import { HeadingTextWrapper, NormalTextWrapper, RandomTextWrapper, TaglineTextWrapper } from "../wrappers/text-wrapper";
 import { BackgroundGradient } from "./background-gradient";
 import { GlowingEffectDemoSecond } from "./glowing-effect-demo";
+import ScreenWrapper from "../wrappers/screen-wrapper";
 
 
 export default function HeroSectionOne() {
 
   return (
-    <div className=" mx-auto flex max-w-8xl flex-col items-center justify-center my-10">
+    <ScreenWrapper className=" mx-auto flex max-w-8xl flex-col items-center justify-center">
       {/* <Navbar /> */}
       {/* <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
@@ -27,7 +28,7 @@ export default function HeroSectionOne() {
           width={500}
           src="/profile-pic.jpg"
           alt="udays-pic"
-          className=" mt-10 h-60 w-60 md:h-72 md:w-72 rounded-full border-2 border-white object-cover object-top  "
+          className="  h-60 w-60 md:h-72 md:w-72 rounded-full border-2 border-white object-cover object-top  "
         />
       </div>
       <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-8">
@@ -109,7 +110,9 @@ export default function HeroSectionOne() {
             Contact Support
           </button>
         </motion.div> */}
-        <motion.div
+
+
+        {/* <motion.div
           initial={{
             opacity: 0,
             y: 10,
@@ -143,9 +146,9 @@ export default function HeroSectionOne() {
           </div>
         </BackgroundGradient>
 
-        </motion.div>
+        </motion.div> */}
       </div>
-    </div>
+    </ScreenWrapper>
   );
 }
 
