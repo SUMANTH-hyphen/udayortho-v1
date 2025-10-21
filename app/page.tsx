@@ -6,6 +6,8 @@ import FeaturesSectionDemo from "@/components/ui/features-section-demo-2";
 import { FocusCardsDemo } from "@/components/ui/focus-cards-demo";
 import GalleryDemo from "@/components/ui/gallery-demo";
 import { GlowingEffectDemoSecond } from "@/components/ui/glowing-effect-demo";
+import { Highlight } from "@/components/ui/hero-highlight";
+import { HeroHighlightDemo } from "@/components/ui/hero-highlight-demo";
 import HeroSectionOne from "@/components/ui/hero-section-demo-1";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
@@ -217,11 +219,15 @@ export default function Home() {
 
         {/* Patents */}
         <ScreenWrapper className=" flex flex-col items-center justify-ceter">
-          <HeadingTextWrapper className=" my-10" >
-            Innovations shaping the future of orthodontics
-          </HeadingTextWrapper>
-          {/* <BackgroundGradient className="rounded-[22px] md:p-8 bg-white"> */}
           <BackgroundGradient containerClassName=" p-4 md:p-10 w-full ">
+            {/* <HeroHighlightDemo /> */}
+            <HeadingTextWrapper className=" mb-10 mt-5" >
+              <Highlight className="text-black ">
+                Innovations
+              </Highlight>
+              &nbsp;shaping the future of orthodontics
+            </HeadingTextWrapper>
+            {/* <BackgroundGradient className="rounded-[22px] md:p-8 bg-white"> */}
             <WobbleCardDemo />
           </BackgroundGradient>
         </ScreenWrapper>
