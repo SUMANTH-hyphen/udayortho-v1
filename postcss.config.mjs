@@ -8,6 +8,7 @@
 const config = {
   theme: {
     extend: {
+      scrollBehavior: ['smooth'],
       fontFamily: {
         sans: ["var(--font-rubik)", "sans-serif"],
       },

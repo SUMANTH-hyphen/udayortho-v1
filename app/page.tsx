@@ -8,7 +8,7 @@ import GalleryDemo from "@/components/ui/gallery-demo";
 import { GlowingEffectDemoSecond } from "@/components/ui/glowing-effect-demo";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { HeroHighlightDemo } from "@/components/ui/hero-highlight-demo";
-import HeroSectionOne from "@/components/ui/hero-section-demo-1";
+import HeroSectionOne, { Navbar } from "@/components/ui/hero-section-demo-1";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
 import { WobbleCardDemo } from "@/components/ui/wobble-card-demo";
@@ -214,11 +214,14 @@ const presentationsData = [
 export default function Home() {
   return (
     <div className="">
+      <header>
+        <Navbar />
+      </header>
       <main className="">
         <HeroSectionOne />
 
         {/* Patents */}
-        <ScreenWrapper className=" flex flex-col items-center justify-ceter">
+        <ScreenWrapper id="patents" className=" flex flex-col items-center justify-ceter">
           <BackgroundGradient containerClassName=" p-4 md:p-10 w-full ">
             {/* <HeroHighlightDemo /> */}
             <HeadingTextWrapper className=" mb-10 mt-5" >
@@ -234,13 +237,13 @@ export default function Home() {
 
 
         {/* Accomplishments & Recognitions */}
-        <ScreenWrapper className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40 lg:my-40 ">
+        <ScreenWrapper id="recognitions" className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40 lg:my-40 ">
           <AppleCardsCarouselDemo />
         </ScreenWrapper>
 
 
         {/* Books */}
-        <ScreenWrapper className=" md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center my-0 md:my-0 gap-14 ">
+        <ScreenWrapper id="books" className=" md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center my-0 md:my-0 gap-14 ">
           <HeadingTextWrapper className="" >
             Books Collaborated On and Contributed To
           </HeadingTextWrapper>
@@ -248,8 +251,22 @@ export default function Home() {
         </ScreenWrapper>
 
 
+        {/* Publications */}
+        <ScreenWrapper id="publications" className=" grid auto-rows-auto lg:flex lg:flex-col items-center justify-center gap-10 md:gap-14 mt-30 md:my-30 lg:my-0 ">
+          <div>
+            <HeadingTextWrapper className=" mb-1 " >
+              Publications in orthodontics
+            </HeadingTextWrapper>
+            <TaglineTextWrapper>
+              Published Works and Contributions in Orthodontics
+            </TaglineTextWrapper>
+          </div>
+          <CanvasRevealEffectDemo />
+        </ScreenWrapper>
+
+
         {/* Fellowships */}
-        <ScreenWrapper className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
+        <ScreenWrapper id="fellowships" className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center my-32 md:my-0 gap-14 ">
           <HeadingTextWrapper className="" >
             Fellowships that recognize excellence in orthodontics
           </HeadingTextWrapper>
@@ -258,13 +275,13 @@ export default function Home() {
 
 
         {/* Education & Experience Timeline */}
-        <ScreenWrapper className="relative w-full overflow-clip mb-30 mb:md-0">
+        <ScreenWrapper id="journey" className="relative w-full overflow-clip mb-30 mb:md-0">
           <Timeline data={experience} />
         </ScreenWrapper>
 
 
         {/* Affiliations  */}
-        <ScreenWrapper className=" md:mt-40">
+        <ScreenWrapper id="affiliations" className=" md:mt-40">
           <BackgroundGradient className="rounded-[22px] md:p-4 bg-white">
             <div className="  p-4 w-full overflow-hidden flex flex-col gap-5 md:gap-10">
               <div>
@@ -287,7 +304,7 @@ export default function Home() {
 
 
         {/* Skills & Expertise */}
-        <ScreenWrapper className=" flex flex-col justify-center my-30 md:my-20 lg:my-30 md:px-3 gap-5 md:gap-10 ">
+        <ScreenWrapper id="skills" className=" flex flex-col justify-center md:px-3 gap-5 md:gap-10 mt-30 md:mt-20 lg:mt-30 ">
           <HeadingTextWrapper className=" text-start md:text-center ">
             Skills and expertise to transform smiles with care
           </HeadingTextWrapper>
@@ -295,22 +312,8 @@ export default function Home() {
         </ScreenWrapper>
 
 
-        {/* Publications */}
-        <MaxWidthWrapper className=" grid auto-rows-auto lg:flex lg:flex-col items-center justify-center gap-10 md:gap-14 ">
-          <div>
-            <HeadingTextWrapper className=" mb-1 " >
-              Publications in orthodontics
-            </HeadingTextWrapper>
-            <TaglineTextWrapper>
-              Published Works and Contributions in Orthodontics
-            </TaglineTextWrapper>
-          </div>
-          <CanvasRevealEffectDemo />
-        </MaxWidthWrapper>
-
-
         {/* Presentations & Workshops */}
-        <ScreenWrapper className=" md:min-h-auto md:h-[60vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center gap-14 md:gap-10 lg:gap-14 ">
+        <MaxWidthWrapper  id="presentations" className=" min-h-auto h-[85vh] md:h-[60vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center gap-14 md:gap-10 lg:gap-14 ">
           <HeadingTextWrapper className="" >
             Presentations
           </HeadingTextWrapper>
@@ -325,11 +328,11 @@ export default function Home() {
               className="relative"
             />
           </div>
-        </ScreenWrapper>
+        </MaxWidthWrapper >
 
 
         {/* wall of fame */}
-        <MaxWidthWrapper className=" max-w-9xl flex flex-col items-center ">
+        <MaxWidthWrapper id="gallery" className=" max-w-9xl flex flex-col items-center ">
           <HeadingTextWrapper className="" >
             Wall of Fame
           </HeadingTextWrapper>
