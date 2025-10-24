@@ -62,7 +62,7 @@ export function AnimatedModalDemo() {
                     alt="modal images"
                     width={500}
                     height={500}
-                    className="rounded-lg h-[20rem] w-[15rem] md:h-[28rem] md:w-[24rem] object-cover shrink-0"
+                    className="rounded-lg h-[20rem] w-[17rem] md:h-[28rem] md:w-[24rem] object-cover shrink-0"
                   />
             </div>
             {/* <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
