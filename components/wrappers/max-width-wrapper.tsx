@@ -17,4 +17,6 @@ const MaxWidthWrapper = forwardRef<HTMLDivElement, MaxWidthWrapperProps>(
     }
 )
 
+MaxWidthWrapper.displayName = "MaxWidthWrapper";
+
 export default MaxWidthWrapper;

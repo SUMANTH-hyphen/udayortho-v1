@@ -7,6 +7,7 @@ import { BackgroundGradient } from "./background-gradient";
 import { GlowingEffectDemoSecond } from "./glowing-effect-demo";
 import ScreenWrapper from "../wrappers/screen-wrapper";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 
 export default function HeroSectionOne() {
@@ -153,86 +154,81 @@ export default function HeroSectionOne() {
   );
 }
 
-// const Navbar = () => {
+
+// export const Navbar = () => {
 //   const [open, setOpen] = useState(false);
+//   const [active, setActive] = useState<string>("home");
+
+//   const navItems = [
+//     "Patents",
+//     "Recognitions",
+//     "Books",
+//     "Publications",
+//     "Fellowships",
+//     "Journey",
+//     "Affiliations",
+//     "Skills",
+//     "Presentations",
+//     "Gallery",
+//   ];
+
+//   // Scroll spy effect — highlight the section user is viewing
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       let current = "";
+//       navItems.forEach((item) => {
+//         const section = document.getElementById(item.toLowerCase());
+//         if (section) {
+//           const sectionTop = section.offsetTop - 80; // adjust offset for navbar height
+//           if (window.scrollY >= sectionTop) {
+//             current = item.toLowerCase();
+//           }
+//         }
+//       });
+//       setActive(current || "patents");
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
 //   const navId = "site-nav";
+
 //   return (
-//     // <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
-//      <nav className="relative w-full mx-auto p-4 border-t border-b border-neutral-200">
-//       <div className="flex items-center justify-between">
+//     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-neutral-200">
+//       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
 //         {/* Brand */}
 //         <a
 //           className="flex-none text-xl font-semibold focus:outline-none focus:opacity-80"
-//           href="#"
+//           href="/"
 //           aria-label="Brand"
 //         >
 //           Uday's Portfolio
-
 //         </a>
 
 //         {/* Desktop links */}
-//         <div className="hidden sm:flex sm:items-center sm:gap-6">
-//           <a className="font-medium text-blue-500" href="#" aria-current="page">
-//             Patents
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Recognitions
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Books
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Publications 
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Fellowships  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Journey  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Affiliations  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Skills  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Presentations  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//           >
-//             Gallery  
-//           </a>
+//         <div className="hidden lg:flex lg:items-center lg:gap-6">
+//           {navItems.map((item) => {
+//             const id = `#${item.toLowerCase()}`;
+//             const isActive = active === item.toLowerCase();
+//             return (
+//               <a
+//                 key={item}
+//                 href={id}
+//                 className={`font-medium transition-colors duration-200 ${
+//                   isActive
+//                     ? "text-[#535EF9]"
+//                     : "text-gray-600 hover:text-gray-400"
+//                 }`}
+//               >
+//                 {item}
+//               </a>
+//             );
+//           })}
 //         </div>
 
 //         {/* Mobile toggle */}
-//         <div className="sm:hidden">
+//         <div className="lg:hidden">
 //           <button
 //             type="button"
 //             aria-controls={navId}
@@ -240,7 +236,7 @@ export default function HeroSectionOne() {
 //             onClick={() => setOpen((s) => !s)}
 //             className="relative inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none"
 //           >
-//             {/* Menu (hamburger) */}
+//             {/* Menu icon */}
 //             <svg
 //               className={`${open ? "hidden" : "block"} shrink-0`}
 //               xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +255,7 @@ export default function HeroSectionOne() {
 //               <line x1="3" x2="21" y1="18" y2="18" />
 //             </svg>
 
-//             {/* Close (X) */}
+//             {/* Close icon */}
 //             <svg
 //               className={`${open ? "block" : "hidden"} shrink-0`}
 //               xmlns="http://www.w3.org/2000/svg"
@@ -282,10 +278,10 @@ export default function HeroSectionOne() {
 //         </div>
 //       </div>
 
-//       {/* Collapsible nav (mobile) */}
+//       {/* Mobile collapsible menu */}
 //       <div
 //         id={navId}
-//         className={`absolute left-0 top-full w-full bg-white shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
+//         className={`absolute left-0 top-full w-full bg-white shadow-lg transition-all duration-300 ease-in-out lg:hidden ${
 //           open
 //             ? "opacity-100 pointer-events-auto translate-y-0"
 //             : "opacity-0 pointer-events-none -translate-y-2"
@@ -293,80 +289,27 @@ export default function HeroSectionOne() {
 //         aria-hidden={!open}
 //       >
 //         <div className="flex flex-col gap-4 py-4 px-5 border-t border-gray-200">
-//           <a
-//             className="font-medium text-blue-500"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Patents
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Recognitions
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Books 
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Publications 
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Fellowships  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Journey  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Affiliations  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Skills  
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Presentations 
-//           </a>
-//           <a
-//             className="font-medium text-gray-600 hover:text-gray-400"
-//             href="#"
-//             onClick={() => setOpen(false)}
-//           >
-//             Gallery 
-//           </a>
+//           {navItems.map((item) => {
+//             const id = `#${item.toLowerCase()}`;
+//             const isActive = active === item.toLowerCase();
+//             return (
+//               <a
+//                 key={item}
+//                 href={id}
+//                 onClick={() => setOpen(false)}
+//                 className={`font-medium transition-colors duration-200 ${
+//                   isActive
+//                     ? "text-[#535EF9]"
+//                     : "text-gray-600 hover:text-gray-400"
+//                 }`}
+//               >
+//                 {item}
+//               </a>
+//             );
+//           })}
 //         </div>
 //       </div>
 //     </nav>
-
 //   );
 // };
 
@@ -413,14 +356,14 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-neutral-200">
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
-        {/* Brand */}
-        <a
-          className="flex-none text-xl font-semibold focus:outline-none focus:opacity-80"
+        {/* ✅ Changed <a> → <Link> for Next.js compliance */}
+        <Link
           href="/"
+          className="flex-none text-xl font-semibold focus:outline-none focus:opacity-80"
           aria-label="Brand"
         >
           Uday's Portfolio
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden lg:flex lg:items-center lg:gap-6">
@@ -528,4 +471,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-
