@@ -92,7 +92,11 @@ export const ModalBody = ({
     }
   }, [open]);
 
-  const modalRef = useRef(null);
+  // const modalRef = useRef(null);
+  // const { setOpen } = useModal();
+  // useOutsideClick(modalRef, () => setOpen(false));
+
+  const modalRef = useRef<HTMLDivElement>(null);
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
@@ -282,12 +286,12 @@ const CloseIcon = () => {
 // };
 
 export const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
+  ref: React.RefObject<HTMLDivElement | null>,
   callback: (event: MouseEvent | TouchEvent) => void
 ) => {
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent) => {
-      // Do nothing if clicking inside the modal
+      // Do nothing if clicking inside the modal or ref is null
       if (!ref.current || ref.current.contains(event.target as Node)) {
         return;
       }
@@ -303,3 +307,4 @@ export const useOutsideClick = (
     };
   }, [ref, callback]);
 };
+
