@@ -4,16 +4,17 @@ import React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { RandomTextWrapper } from "../wrappers/text-wrapper";
+import Link from "next/link";
 
 export function CanvasRevealEffectDemo() {
   return (
     <>
       <div className=" flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
         <Card title="Published as a book chapter in IntechOpen Textbook, December 2023. This work introduces a structured approach to understanding and categorizing self-ligating bracket systems for orthodontic practice." icon={<CardIcon1 />}>
-          <CanvasRevealEffect
+          {/* <CanvasRevealEffect
             animationSpeed={4}
             containerClassName="bg-[#8661D2]"
-          />
+          /> */}
         </Card>
 
         {/* <Card title="Nisha is Munni" icon={<AceternityIcon />}>
@@ -71,7 +72,7 @@ const Card = ({
       <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {hovered && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -81,9 +82,9 @@ const Card = ({
             {children}
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
-      <div className=" items-center justify-around flex flex-col">
+      {/* <div className=" items-center justify-around flex flex-col">
         <div className="text-center group-hover/canvas-card:-translate-y-1 group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center text-slate-700 text-2xl ">
           {icon}
         </div>
@@ -91,6 +92,21 @@ const Card = ({
           {title}
         </RandomTextWrapper>
         <RandomTextWrapper className=" text-xs font-medium text-slate-500 dark:text-slate-300 tracking-wide group-hover/canvas-card:-translate-y-1 group-hover/canvas-card:opacity-0 transition duration-200 border rounded-lg p-2 w-fit it  ">Hover to Reveal</RandomTextWrapper>
+      </div> */}
+
+      <div className="items-center justify-around flex flex-col">
+        <div className="text-start transition duration-200 w-full mx-auto flex items-center justify-center text-slate-700 text-2xl ">
+          {icon}
+        </div>
+        <RandomTextWrapper className="dark:text-white text-lg text-gray-600 w-full mx-auto text-start flex items-center justify-center ">
+          {title}
+        </RandomTextWrapper>
+        <div className="w-full text-start">
+          <Link href="#" className="inline-flex font-medium items-center text-fg-brand hover:underline">
+            Read More
+            <svg className="w-4 h-4 ms-2 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" /></svg>
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -99,21 +115,21 @@ const Card = ({
 const CardIcon1 = () => {
   return (
     <div>
-        <RandomTextWrapper>Classification System for Self-Ligating Brackets</RandomTextWrapper>
+      <RandomTextWrapper>Classification System for Self-Ligating Brackets</RandomTextWrapper>
     </div>
   );
 };
 const CardIcon2 = () => {
   return (
     <div>
-        <RandomTextWrapper>Interproximal Reduction Facilitating Orthodontic Teeth Extraction</RandomTextWrapper>
+      <RandomTextWrapper>Interproximal Reduction Facilitating Orthodontic Teeth Extraction</RandomTextWrapper>
     </div>
   );
 };
 const CardIcon3 = () => {
   return (
     <div>
-        <RandomTextWrapper>A Novel Appointment protocol to Accelerate Orthodontic Treatment</RandomTextWrapper>
+      <RandomTextWrapper>A Novel Appointment protocol to Accelerate Orthodontic Treatment</RandomTextWrapper>
     </div>
   );
 };

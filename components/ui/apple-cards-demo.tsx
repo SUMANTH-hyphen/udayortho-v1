@@ -55,7 +55,16 @@ const DummyContent = () => {
   );
 };
 
+// Aesthetic Dentistry MENA Awards 2025 – 1st Place (Orthodontic – Adults) & Finalist (Orthodontic – Children)
+
 const data = [
+  {
+    category: "CAPP for MENA region",
+    metadata: "Q4 2025, UAE",
+    title: "Honored to accept dual recognition at the Aesthetic Dentistry MENA Awards 2025: 1st Place Award Recipient (Orthodontic – Adults) and Finalist (Orthodontic – Children).",
+    src: "/recog00.jpg",
+    content: <DummyContent />,
+  },
   {
     category: "UAE Telugu Doctors Group",
     metadata: "Q2 2025, UAE",
