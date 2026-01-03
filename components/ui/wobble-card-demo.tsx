@@ -28,7 +28,7 @@ export function WobbleCardDemo() {
                     alt=""
                     height={500}
                     width={500}
-                    className="absolute -right-10 md:-right-0 -bottom-16 md:-bottom-20 lg:-bottom-15 object-contain rounded-2xl z-10 opacity-90"
+                    className="absolute -right-10 md:-right-5 -bottom-16 md:-bottom-20 lg:-bottom-15 object-contain rounded-2xl z-10 opacity-90"
                 />
             </WobbleCard>
 
@@ -54,7 +54,7 @@ export function WobbleCardDemo() {
                     alt=""
                     height={400}
                     width={400}
-                    className="absolute -right-10 md:-right-[0%] lg:-right-[14%] -bottom-20 md:-bottom-10 lg:-bottom-20 object-contain rounded-2xl"
+                    className="absolute -right-10 md:-right-[0%] lg:-right-[18%] -bottom-20 md:-bottom-10 lg:-bottom-20 object-contain rounded-2xl"
                 />
             </WobbleCard>
             <WobbleCard key={4} containerClassName="col-span-1 lg:col-span-2 bg-white border-2 min-h-[200px] lg:min-h-[600px] xl:min-h-[300px]">
@@ -129,7 +129,7 @@ export function WobbleCardDemo() {
                     alt=""
                     height={400}
                     width={400}
-                    className="absolute -right-10 lg:-right-15 -bottom-15 object-contain rounded-2xl z-10 opacity-90"
+                    className="absolute -right-10 lg:-right-15 -bottom-17 object-contain rounded-2xl z-10 opacity-90"
                 />
             </WobbleCard>
 

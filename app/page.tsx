@@ -219,7 +219,7 @@ export default function Home() {
         <Navbar />
       </header>
       <main className="">
-        <AnimatedModalDemo />
+        {/* <AnimatedModalDemo /> */}
         <HeroSectionOne />
 
         {/* Patents */}
@@ -305,14 +305,6 @@ export default function Home() {
         </ScreenWrapper>
 
 
-        {/* Skills & Expertise */}
-        <ScreenWrapper id="skills" className=" flex flex-col justify-center md:px-3 gap-5 md:gap-10 mt-30 md:mt-20 lg:mt-30 ">
-          <HeadingTextWrapper className=" text-start md:text-center ">
-            Skills and expertise to transform smiles with care
-          </HeadingTextWrapper>
-          <FeaturesSectionDemo />
-        </ScreenWrapper>
-
 
         {/* Presentations & Workshops */}
         <MaxWidthWrapper  id="presentations" className=" min-h-auto h-[85vh] md:h-[60vh] lg:min-h-screen lg:my-0 flex flex-col items-center justify-center gap-14 md:gap-10 lg:gap-14 ">
@@ -331,6 +323,15 @@ export default function Home() {
             />
           </div>
         </MaxWidthWrapper >
+
+        {/* Skills & Expertise */}
+        {/* <ScreenWrapper id="skills" className=" flex flex-col justify-center md:px-3 gap-5 md:gap-10 mt-30 md:mt-20 lg:mt-30 "> */}
+        <ScreenWrapper id="skills" className=" flex flex-col items-center gap-5 md:gap-10 mb-30 md:mb-20 lg:mb-0">
+          <HeadingTextWrapper className=" text-start md:text-center  ">
+            Skills and expertise to transform smiles with care
+          </HeadingTextWrapper>
+          <FeaturesSectionDemo />
+        </ScreenWrapper>
 
 
         {/* wall of fame */}

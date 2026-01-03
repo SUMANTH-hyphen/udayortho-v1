@@ -4,13 +4,18 @@ import React from 'react'
 const GalleryDemo = () => {
 
     const images = [
+        "/marque11.jpg", 
+        "/marque0.jpg",
+        "/marque8.jpg",
+        "/marque1.jpg",
+        "/marque2.jpg",
         "/marque4.jpg",
+        "/marque3.jpg",
         "/marque6.jpg",
         "/marque7.jpg",
         "/marque5.jpg",
         "/marque10.jpg",
         "/marque9.jpg",
-        "/marque8.jpg",
     ];
 
     return (
