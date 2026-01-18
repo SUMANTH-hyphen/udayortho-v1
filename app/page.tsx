@@ -1,5 +1,7 @@
+import CardProductDemo from "@/components/shadcn-studio/card/card-product";
 import { AppleCardsCarouselDemo } from "@/components/ui/apple-cards-demo";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { BentoGridDemo } from "@/components/ui/bento-grid-demo";
 import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-demo";
 import { FeaturesSectionDemo1 } from "@/components/ui/features-section-demo-1";
 import FeaturesSectionDemo from "@/components/ui/features-section-demo-2";
@@ -223,7 +225,7 @@ export default function Home() {
         <HeroSectionOne />
 
         {/* Patents */}
-        <ScreenWrapper id="patents" className=" flex flex-col items-center justify-ceter">
+        <ScreenWrapper id="patents" className=" lg:px-10 flex flex-col items-center justify-ceter">
           <BackgroundGradient containerClassName=" p-4 md:p-10 w-full ">
             {/* <HeroHighlightDemo /> */}
             <HeadingTextWrapper className=" mb-10 mt-5" >
@@ -233,13 +235,15 @@ export default function Home() {
               &nbsp;shaping the future of orthodontics
             </HeadingTextWrapper>
             {/* <BackgroundGradient className="rounded-[22px] md:p-8 bg-white"> */}
-            <WobbleCardDemo />
+            {/* <WobbleCardDemo />/ */}
+            {/* <BentoGridDemo /> */}
+            <CardProductDemo />
           </BackgroundGradient>
         </ScreenWrapper>
 
 
         {/* Accomplishments & Recognitions */}
-        <ScreenWrapper id="recognitions" className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40 lg:my-40 ">
+        <ScreenWrapper id="recognitions" className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40  ">
           <AppleCardsCarouselDemo />
         </ScreenWrapper>
 

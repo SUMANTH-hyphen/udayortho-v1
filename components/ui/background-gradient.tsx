@@ -111,7 +111,7 @@ export const BackgroundGradient = ({
             : undefined
         }
         className={cn(
-          "absolute inset-0 opacity-70",
+          "absolute inset-0 opacity-60",
           "[background-image:linear-gradient(45deg,theme(colors.gray.300)_12.5%,transparent_12.5%,transparent_50%,theme(colors.gray.300)_50%,theme(colors.gray.300)_62.5%,transparent_62.5%,transparent_100%)]",
           "[background-size:6px_6px]",
           "bg-white dark:bg-neutral-950"

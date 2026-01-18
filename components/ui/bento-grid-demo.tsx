@@ -88,7 +88,7 @@ const items = [
 
 export function BentoGridDemo() {
   return (
-    <BentoGrid className="max-w-[1800px] mx-auto">
+    <BentoGrid className="max-w-450 mx-auto">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
