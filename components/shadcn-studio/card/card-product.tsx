@@ -29,50 +29,29 @@ const items: ProductItem[] = [
     title: "Inverted Orthodontic Retraction Loops with Occlusal Application",
     description: "Innovative inverted retraction loops delivering precise occlusal-direction force for efficient orthodontic space closure.",
     image: "/patent1.jpg",
-    badgeStatus: "Granted",
+    badgeStatus: "Patent Granted",
     badgeNation: "UK Design Patent",
   },
   {
     title: "Orthodontic Retraction Loop, straight, and angled",
     description: "An advanced retraction loop system redefining space closure mechanics through precision force control and ergonomic wire design.",
     image: "/patent2.jpg",
-    badgeStatus: "Granted",
-    badgeNation: "Indian Design Patent",
-  },
-  {
-    title: "Orthodontic Archwire Distal Bending Device",
-    description: "Advanced distal bending device delivering smooth, precise terminal wire bends with least effort.",
-    image: "/patent7.jpg",
-    badgeStatus: "Under Review",
-    badgeNation: "Indian Design and Utility Patent",
-  },
-  {
-    title: "Multi-Purpose Orthodontic Tweezer",
-    description: "A smart, dual-action orthodontic tweezer that simplifies treatment by merging precision, versatility, and ergonomic design.",
-    image: "/patent10.jpg",
-    badgeStatus: "Under Review",
+    badgeStatus: "Patent Granted",
     badgeNation: "Indian Design Patent",
   },
   {
     title: "Orthodontic Accessory Bracket",
     description:
       "A smart orthodontic accessory bracket that expands treatment possibilities with reliable auxiliary attachment.",
-    image: "/patent3.jpg",
-    badgeStatus: "Under Review",
+    image: "/patent5.jpg",
+    badgeStatus: "Patent Granted",
     badgeNation: "India Design Patent",
   },
-  {
-    title: "Self-Ligating Orthodontic Accessory Eyelet Bracket",
-    description: "A next-generation self-ligating orthodontic eyelet that merges convenience, precision, and reduced friction.",
-    image: "/patent4.jpg",
-    badgeStatus: "Under Review",
-    badgeNation: "Indian Utility Patent",
-  },
-  {
+   {
     title: "Orthodontic Auxiliary Bracket",
     description: "Smart auxiliary bracket designed to simplify complex mechanics and deliver greater control.",
-    image: "/patent5.jpg",
-    badgeStatus: "Under Review",
+    image: "/patent11.jpg",
+    badgeStatus: "Patent Granted",
     badgeNation: "Indian Design Patent",
   },
   {
@@ -80,37 +59,58 @@ const items: ProductItem[] = [
     description:
       "A next-generation orthodontic bracket integrating hygiene-focused design and advanced materials.",
     image: "/patent6.jpg",
-    badgeStatus: "Under Review",
+    badgeStatus: "Patent Granted",
     badgeNation: "Indian Design Patent",
+  },
+  {
+    title: "Orthodontic Bracket",
+    description: "A next-generation orthodontic bracket integrating advanced features for enhanced treatment outcomes.",
+    image: "/patent12.jpg",
+    badgeStatus: "Patent Granted",
+    badgeNation: "India Design Patent",
+  },
+  {
+    title: "Orthodontic Archwire Distal Bending Device",
+    description: "Advanced distal bending device delivering smooth, precise terminal wire bends with least effort.",
+    image: "/patent7.jpg",
+    badgeStatus: "Patent Pending",
+    badgeNation: "Indian Design and Utility Patent",
+  },
+  {
+    title: "Multi-Purpose Orthodontic Tweezer",
+    description: "A smart, dual-action orthodontic tweezer that simplifies treatment by merging precision, versatility, and ergonomic design.",
+    image: "/patent10.jpg",
+    badgeStatus: "Patent Pending",
+    badgeNation: "Indian Design Patent",
+  },
+  {
+    title: "Self-Ligating Orthodontic Accessory Eyelet Bracket",
+    description: "A next-generation self-ligating orthodontic eyelet that merges convenience, precision, and reduced friction.",
+    image: "/patent4.jpg",
+    badgeStatus: "Patent Pending",
+    badgeNation: "Indian Utility Patent",
   },
   {
     title: "Orthodontic Accessory Bracket",
     description:
       "A smart orthodontic accessory bracket that expands treatment possibilities with reliable auxiliary attachment.",
     image: "/patent9.jpg",
-    badgeStatus: "Under Review",
+    badgeStatus: "Patent Pending",
     badgeNation: "India Utility Patent",
   },
   {
-    title: "Orthodontic Adhesive Dispenser",
+    title: "Controlled Adhesive Dispenser",
     description: "Innovative orthodontic adhesive dispenser ensuring precise, consistent application for optimal bonding.",
-    image: "/patent11.jpg",
-    badgeStatus: "Under Review",
+    image: "/patent3.jpg",
+    badgeStatus: "Patent Pending",
     badgeNation: "India Utility Patent",
   },
   {
-    title: "Anatomical Elastic Chain for Orthodontic Space Closure",
+    title: "Elastic chain for orthodontic space closure",
     description: "Innovative elastic chain designed for anatomical fit and efficient space closure in orthodontic treatment.",
     image: "/patent8.jpg",
-    badgeStatus: "Under Review",
+    badgeStatus: "Patent Pending",
     badgeNation: "India Utility Patent",
-  },
-  {
-    title: "Orthodontic Bracket",
-    description: "A next-generation orthodontic bracket integrating advanced features for enhanced treatment outcomes.",
-    image: "/patent12.jpg",
-    badgeStatus: "Under Review",
-    badgeNation: "India Design Patent",
   },
 ]
 
@@ -138,12 +138,12 @@ const CardProduct = ({ item }: CardProductProps) => {
           <CardDescription className="flex flex-wrap items-center gap-2 mt-1">
             <Badge
               variant="secondary"
-              className={`rounded-sm flex items-center gap-1 whitespace-nowrap ${item.badgeStatus === "Granted"
+              className={`rounded-sm flex items-center gap-1 whitespace-nowrap ${item.badgeStatus === "Patent Granted"
                   ? "bg-green-300/40"
                   : "bg-orange-300/40"
                 }`}
             >
-              {item.badgeStatus === "Granted" ? <BadgeCheckIcon size={16} /> : <CircleDashed size={16} />}
+              {item.badgeStatus === "Patent Granted" ? <BadgeCheckIcon size={16} /> : <CircleDashed size={16} />}
               {item.badgeStatus}
             </Badge>
             <Badge

@@ -8,6 +8,7 @@ import { GlowingEffectDemoSecond } from "./glowing-effect-demo";
 import ScreenWrapper from "../wrappers/screen-wrapper";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Alerts } from "./popup-modal";
 
 
 export default function HeroSectionOne() {
@@ -33,7 +34,7 @@ export default function HeroSectionOne() {
           className="  h-60 w-60 md:h-72 md:w-72 rounded-full border-2 border-white object-cover object-top  "
         />
       </div>
-      <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-8">
+      <div className=" grid auto-rows-auto px-4 py-5 md:py-10 gap-y-4 md:gap-y-6">
         <HeadingTextWrapper className=" mx-auto max-w-4xl md:text-4xl ">
           {"Hello I'm Dr. Uday Kumar"
             .split(" ")
@@ -53,6 +54,22 @@ export default function HeroSectionOne() {
               </motion.span>
             ))}
         </HeadingTextWrapper>
+
+        <motion.span
+          // key={index}
+          initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+          animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 1.5,
+            ease: "easeInOut",
+          }}
+          className="mr-2 inline-block"
+        >
+          <Alerts />
+        </motion.span>
+
+
         <div className=" md:row-span-2">
           <HeadingTextWrapper className=" relative z-10 mx-auto max-w-8xl text-3xl">
             {"Transforming Smiles with Expertise & Compassion"
@@ -374,11 +391,10 @@ export const Navbar = () => {
               <a
                 key={item}
                 href={id}
-                className={`font-medium transition-colors duration-200 ${
-                  isActive
+                className={`font-medium transition-colors duration-200 ${isActive
                     ? "text-[#535EF9]"
                     : "text-gray-600 hover:text-gray-400"
-                }`}
+                  }`}
               >
                 {item}
               </a>
@@ -440,11 +456,10 @@ export const Navbar = () => {
       {/* Mobile collapsible menu */}
       <div
         id={navId}
-        className={`absolute left-0 top-full w-full bg-white shadow-lg transition-all duration-300 ease-in-out lg:hidden ${
-          open
+        className={`absolute left-0 top-full w-full bg-white shadow-lg transition-all duration-300 ease-in-out lg:hidden ${open
             ? "opacity-100 pointer-events-auto translate-y-0"
             : "opacity-0 pointer-events-none -translate-y-2"
-        }`}
+          }`}
         aria-hidden={!open}
       >
         <div className="flex flex-col gap-4 py-4 px-5 border-t border-gray-200">
@@ -456,11 +471,10 @@ export const Navbar = () => {
                 key={item}
                 href={id}
                 onClick={() => setOpen(false)}
-                className={`font-medium transition-colors duration-200 ${
-                  isActive
+                className={`font-medium transition-colors duration-200 ${isActive
                     ? "text-[#535EF9]"
                     : "text-gray-600 hover:text-gray-400"
-                }`}
+                  }`}
               >
                 {item}
               </a>

@@ -10,6 +10,26 @@ import {
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
+import { Trophy } from "lucide-react";
+
+
+export const Alerts = () => {
+  return (
+    <div className=" w-full flex justify-center items-center">
+       <Alert className=" w-fit ">
+        <Trophy size={100} />
+        <AlertTitle className=" line-clamp-4">
+          2025 MENA Aesthetic Dentistry Award Winner
+        </AlertTitle>
+      </Alert>
+    </div>
+  )
+}
 
 export function AnimatedModalDemo() {
   const images = [
@@ -34,7 +54,7 @@ export function AnimatedModalDemo() {
           <ModalContent>
             <h4 className="text-base md:text-xl text-neutral-600 dark:text-neutral-100 font-medium text-center mb-8">
             🏆 "Aesthetic Dentistry MENA Awards 2025 – 1st Place (Orthodontic – Adults) & Finalist (Orthodontic – Children)"
-            </h4>
+            </h4> 
             <div className="flex justify-center items-center">
               {/* {images.map((image, idx) => (
                 <motion.div

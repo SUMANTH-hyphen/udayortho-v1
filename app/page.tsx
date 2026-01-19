@@ -12,7 +12,7 @@ import { Highlight } from "@/components/ui/hero-highlight";
 import { HeroHighlightDemo } from "@/components/ui/hero-highlight-demo";
 import HeroSectionOne, { Navbar } from "@/components/ui/hero-section-demo-1";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { AnimatedModalDemo } from "@/components/ui/popup-modal";
+import { Alerts, AnimatedModalDemo } from "@/components/ui/popup-modal";
 import { Timeline } from "@/components/ui/timeline";
 import { WobbleCardDemo } from "@/components/ui/wobble-card-demo";
 import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
@@ -222,6 +222,7 @@ export default function Home() {
       </header>
       <main className="">
         {/* <AnimatedModalDemo /> */}
+    
         <HeroSectionOne />
 
         {/* Patents */}
@@ -243,7 +244,7 @@ export default function Home() {
 
 
         {/* Accomplishments & Recognitions */}
-        <ScreenWrapper id="recognitions" className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40  ">
+        <ScreenWrapper id="recognitions" className="md:min-h-auto md:h-[80vh] lg:min-h-screen flex flex-col items-center justify-center md:mt-40 my-20 ">
           <AppleCardsCarouselDemo />
         </ScreenWrapper>
 

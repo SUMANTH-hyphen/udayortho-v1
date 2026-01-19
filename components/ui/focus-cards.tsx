@@ -20,9 +20,9 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-lg relative dark:bg-neutral-900 overflow-hidden h-[18rem] md:h-[20rem] lg:h-[25rem] w-full transition-all duration-500 ease-out transform",
-        hovered === index && " md:scale-[1.05] z-10", // zoom effect on hover
-        hovered !== null && hovered !== index && "blur-sm scale-[0.97]"
+        "rounded-lg relative dark:bg-neutral-900 overflow-hidden h-[25rem] md:h-[25rem] lg:h-[31rem] w-full transition-all duration-500 ease-out transform",
+        hovered === index && " md:scale-[1.06] z-10", // zoom effect on hover
+        hovered !== null && hovered !== index && "md:blur-sm scale-[0.97]"
       )}
     >
       <Image
@@ -34,7 +34,7 @@ export const Card = React.memo(
       />
       <div
         className={cn(
-          "absolute inset-0 bg-black/10 flex items-end py-8 px-4 transition-opacity duration-300",
+          "absolute inset-0 bg-black/5 flex items-end py-8 px-4 transition-opacity duration-300",
           hovered === index ? "opacity-100" : "opacity-0"
         )}
       ></div>
