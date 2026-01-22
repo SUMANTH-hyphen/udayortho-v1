@@ -22,9 +22,10 @@ export const Alerts = () => {
   return (
     <div className=" w-full flex justify-center items-center">
        <Alert className=" w-fit ">
-        <Trophy size={100} />
+        <Trophy />
         <AlertTitle className=" line-clamp-4">
-          2025 MENA Aesthetic Dentistry Award Winner
+          {/* 2025 MENA Aesthetic Dentistry Award Winner */}
+          1st Prize Winner Best Orthodontic Case · MENA Aesthetic Dentistry Awards 2025
         </AlertTitle>
       </Alert>
     </div>
