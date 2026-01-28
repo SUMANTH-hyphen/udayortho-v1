@@ -352,34 +352,34 @@ export default function Home() {
         {/* <FloatingDock items={icons} desktopClassName="" mobileClassName="" /> */}
         <nav className="">
           <div className=" flex items-center gap-10 justify-evenly">
-            <a href="" target="" rel="">
+            <a href="https://www.instagram.com/drudayalle/" target="_blank" rel="">
               <IconBrandInstagram
                 size={45}
                 strokeWidth={1}
                 color={'white'}
               />
             </a>
-            <a href="" target="" rel="">
+            <a href="https://www.linkedin.com/in/dr-uday-kumar-alle-fpfa-usa-bb644020/" target="_blank" rel="">
               <IconBrandLinkedin
                 size={40}
                 strokeWidth={1}
                 color={'white'}
               />
             </a>
-            <a href="" target="" rel="">
+            {/* <a href="" target="_blank" rel="">
               <IconBrandTwitter
                 size={40}
                 strokeWidth={1}
                 color={'white'}
               />
             </a>
-            <a href="" target="" rel="">
+            <a href="" target="_blank" rel="">
               <IconBrandFacebook
                 size={40}
                 strokeWidth={1}
                 color={'white'}
               />
-            </a>
+            </a> */}
           </div>
         </nav>
         <aside>
